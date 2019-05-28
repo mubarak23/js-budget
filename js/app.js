@@ -20,6 +20,13 @@ class UI {
   //submit budget class
   submitBugetForm(){
     console.log("Hello From submit Budget ES6 Method");
+    const value = this.budgetInput.value;
+    console.log(value);
+    //check if the value is zero or less than 1
+    if(value === '' || value < 0){
+      this.budgetFeedback.classList.add('showItem');
+      this.budgetFeedback.innerHTML = `<p>Value Cannot Negative or Zero</p>`;
+    }
   }
 
 }
