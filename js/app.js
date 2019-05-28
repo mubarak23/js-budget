@@ -25,7 +25,15 @@ class UI {
     //check if the value is zero or less than 1
     if(value === '' || value < 0){
       this.budgetFeedback.classList.add('showItem');
-      this.budgetFeedback.innerHTML = `<p>Value Cannot Negative or Zero</p>`;
+      this.budgetFeedback.innerHTML = `<p>Value Cannot Negative or Empty </p>`;
+      const self = this; 
+      console.log(this);
+      setTimeout(function(){
+        console.log(this);
+        console.log(self);
+        self.budgetFeedback.classList.remove('showItem');
+        
+      }, 4000)
     }
   }
 
