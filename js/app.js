@@ -17,13 +17,18 @@ class UI {
     this.itemID = 0;
   }
 
+  //submit budget class
+  submitBugetForm(){
+    console.log("Hello From submit Budget ES6 Method");
+  }
+
 }
 
 
 function eventListeners(){
-const budgetForm = getElementById('budget-form');
-const expenseForm = getElementById('expense-form');
-const expenseList = getElementById('expense-list');
+const budgetForm = document.getElementById('budget-form');
+const expenseForm = document.getElementById('expense-form');
+const expenseList = document.getElementById('expense-list');
 
 //create a new instance of UI class
 const ui = new UI();
@@ -31,6 +36,7 @@ const ui = new UI();
 //budget form submit
 budgetForm.addEventListener('submit', function(event){
   event.preventDefault();
+  ui.submitBugetForm();
 });
 //expense form submit
 expenseForm.addEventListener('submit', function(event){
