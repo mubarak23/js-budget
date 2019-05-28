@@ -30,15 +30,15 @@ const ui = new UI();
 
 //budget form submit
 budgetForm.addEventListener('submit', function(event){
-
+  event.preventDefault();
 });
 //expense form submit
 expenseForm.addEventListener('submit', function(event){
-
+  event.preventDefault();
 })
 
 //expense click
-expenseList.addEventListener('submit', function(event){
+expenseList.addEventListener('click', function(event){
 
 })
 
