@@ -27,6 +27,22 @@ const expenseList = getElementById('expense-list');
 
 //create a new instance of UI class
 const ui = new UI();
+
+//budget form submit
+budgetForm.addEventListener('submit', function(event){
+
+});
+//expense form submit
+expenseForm.addEventListener('submit', function(event){
+
+})
+
+//expense click
+expenseList.addEventListener('submit', function(event){
+
+})
+
+
 }
 
 document.addEventListener('DOMContentLoaded', function(){
