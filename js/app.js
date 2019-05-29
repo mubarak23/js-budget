@@ -34,7 +34,15 @@ class UI {
         self.budgetFeedback.classList.remove('showItem');
         
       }, 4000)
+    }else{
+      this.budgetAmount.textContent = value;
+      this.budgetInput.value = '';
+      this.showBalance();
     }
+  }
+  //show balance method
+  showBalance(){
+    console.log(`THIS keyword is magical`);
   }
 
 }
