@@ -29,8 +29,8 @@ class UI {
       const self = this; 
       console.log(this);
       setTimeout(function(){
-        console.log(this);
-        console.log(self);
+        //console.log(this);
+        //console.log(self);
         self.budgetFeedback.classList.remove('showItem');
         
       }, 4000)
@@ -42,7 +42,14 @@ class UI {
   }
   //show balance method
   showBalance(){
-    console.log(`THIS keyword is magical`);
+    //console.log(`THIS keyword is magical`);
+    const expense = this.TotalExpense();
+    const total = parseInt(this.budgetAmount.textContent);
+  }
+  //total expense
+  TotalExpense(){
+    let total = 4000;
+    return total;
   }
 
 }
