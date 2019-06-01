@@ -70,8 +70,25 @@ class UI {
           setTimeout(function(){
               self.expenseFeedback.classList.remove('showItem')
           }, 4000);
+    }else{
+      let amount = parent(amountValue);
+      this.expenseInput = '';
+      this.amountInput = '';
+      let expense = {
+        id: this.itemID,
+        title: expenseValue,
+        amount: amount
+      }
+      this.itemID++;
+      this.itemList.push(expense);
+      //add expense method
+      this.addExpense(expense);
+      //show balance
+
     }
   }
+
+ //add expense  
 
   //total expense
   TotalExpense(){
