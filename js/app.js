@@ -66,6 +66,10 @@ class UI {
     if(expenseValue === '' || amountValue === '' || amountValue < 0){
           this.expenseFeedback.classList.add('showItem');
           this.expenseFeedback.innerHTML = `<p>Values cannot be empty or Negative</p>`;
+          const self = this;
+          setTimeout(function(){
+              self.expenseFeedback.classList.remove('showItem')
+          }, 4000);
     }
   }
 
