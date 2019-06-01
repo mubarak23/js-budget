@@ -71,7 +71,7 @@ class UI {
               self.expenseFeedback.classList.remove('showItem')
           }, 4000);
     }else{
-      let amount = parent(amountValue);
+      let amount = parseInt(amountValue);
       this.expenseInput = '';
       this.amountInput = '';
       let expense = {
@@ -108,7 +108,8 @@ class UI {
      </a>
     </div>
    </div>
-    `
+    `;
+    this.expenseList.appendChild(div);
   }
   //total expense
   TotalExpense(){
