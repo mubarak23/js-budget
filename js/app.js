@@ -57,6 +57,18 @@ class UI {
       this.balance.classList.add('showBlack');
     }
   }
+  //submit expense Form
+  submitExpenseForm(){
+    const expenseValue = this.expenseInput.value;
+    const amountValue = this.amountInput.value;
+
+    //check expense value
+    if(expenseValue === '' || amountValue === '' || amountValue < 0){
+          this.expenseFeedback.classList.add('showItem');
+          this.expenseFeedback.innerHTML = `<p>Values cannot be empty or Negative</p>`;
+    }
+  }
+
   //total expense
   TotalExpense(){
     let total = 4000;
@@ -82,6 +94,7 @@ budgetForm.addEventListener('submit', function(event){
 //expense form submit
 expenseForm.addEventListener('submit', function(event){
   event.preventDefault();
+  ui.submitExpenseForm();
 })
 
 //expense click
