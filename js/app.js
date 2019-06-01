@@ -119,7 +119,6 @@ class UI {
     if(this.itemList.length > 0){
        console.log(this.itemList);
        total = this.itemList.reduce(function(acc, curr){
-        
         console.log(`Total is ${acc} and the current value ${curr.amount}`);
         acc +=curr.amount;
         return acc;
