@@ -44,7 +44,7 @@ class UI {
   showBalance(){
     //console.log(`THIS keyword is magical`);
     const expense = this.TotalExpense();
-    const total = parseInt(this.budgetAmount.textContent) - expense;
+    const total = parseInt(this.budgetAmount.textcontent) - expense;
     this.balanceAmount.textContent = total;
     if(total < 0){
       this.balance.classList.remove('showGreen', 'showBlack');
@@ -119,10 +119,22 @@ class UI {
     let parent = element.parentElement.parentElement.parentElement;
     //remove from dom
     this.expenseList.removeChild(parent);
-    //remove from the list
+    //remove from the dom
     let expense = this.itemList.filter(function(item){
         return item.id === id;
     })
+    //show item
+    this.expenseInput.value = expense[0].title
+    this.amountInput.value = expense[0].amount;
+    console.log(expense[0].title);
+    console.log(expense[0].amount);
+    //remove from the list
+    let tempList = this.itemList.filter(function(item){
+        return item.id !== id;
+    })
+    //append tempList to itemList
+    this.itemList = tempList;
+    this.showBalance();
 
   }
 
@@ -143,7 +155,7 @@ class UI {
         return acc;
        }, 0) 
     }
-    this.expenseAmount.textContent = total
+    this.expenseAmount.textcontent = total
 
     return total;
   }
