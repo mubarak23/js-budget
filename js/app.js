@@ -153,6 +153,12 @@ expenseForm.addEventListener('submit', function(event){
 
 //expense click
 expenseList.addEventListener('click', function(event){
+  //console.log(event.target);
+  if(event.target.parentElement.classList.contains('edit-icon')){
+    ui.editExpense(event.target.parentElement);
+  }else if(event.target.parentElement.classList.contains('delete-icon')){
+    ui.deleteExpense(event.parentElement);
+  }
 
 })
 
